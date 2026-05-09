@@ -5,14 +5,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-pension_chain = "68vbvrrUcTARuM512d8bz6eAPuKaEjFhM22mB8tJJMx9"
-
-[registry]
-url = "https://api.apr.dev"
+pension_chain = "Azxg2uCjx4oJNBgjQ4ZosnjVy38wNgntmXnh8seTXwhj"
 
 [provider]
-cluster = "Localnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+test = "cargo test -- --nocapture"
+
+[hooks]
